@@ -1,4 +1,3 @@
-// import Pizza from "../assets/imgs/mozzarella-pizza.jpg";
 import "./searchRecipes.scss";
 
 function searchRecipes() {
