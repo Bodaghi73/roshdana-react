@@ -1,0 +1,64 @@
+@import '../assets/style.scss';
+
+.section {
+    width: 100%;
+    height: 500px;
+    background-image: url(../assets/imgs/mozzarella-pizza.jpg);
+    display: flex;
+
+
+    .search {
+        width: 40%;
+        margin: auto;
+
+        .search-box {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(250, 250, 250, 0.7);
+            border-radius: 10px;
+
+            .search-box-inner {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .search-recipes {
+                    margin-bottom: 10px;
+
+                    input {
+                        width: 100%;
+                        @extend %input;
+                    }
+                }
+
+                .number-recipes {
+                    margin-bottom: 10px;
+
+                    label {
+                        font-size: 12px;
+                    }
+
+                    input {
+                        @extend %input;
+                    }
+                }
+
+                .search-button {
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 10px;
+
+                    button {
+                        background-color: #fbc02d;
+                        padding: 10px 50px;
+                        &:hover{
+                            background-color: #fdd835;
+                        }
+
+                        @extend %button;
+                    }
+                }
+            }
+        }
+    }
+}
