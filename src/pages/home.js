@@ -1,6 +1,10 @@
+import SearchRecipes from "../components/searchRecipes";
+
 function home() {
     return(
-        <b></b>
+        <div>
+            <SearchRecipes></SearchRecipes>
+        </div>
     );
 }
 

@@ -61,10 +61,10 @@ header{
         .auth-buttons{
             button{
                 background-color: $color-theme;
-                border-radius: 5px;
                 padding: 5px 20px;
-                font-size: 16px;
-                cursor: pointer;
+                margin-left: 2px;
+                @extend %button;
+
                 &:hover{
                     background-color: $color-title;
                     a{
