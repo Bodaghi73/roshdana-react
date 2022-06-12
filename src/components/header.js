@@ -14,7 +14,7 @@ function header() {
                             <a href="/">Home</a>
                         </li>
 						<li>
-                            <a href="/">Advance Search</a>
+                            <a href="/AdvanceSearch">Advance Search</a>
                         </li>
 						<li>
                             <a href="/">About</a>
