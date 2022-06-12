@@ -6,7 +6,6 @@
     background-image: url(../assets/imgs/mozzarella-pizza.jpg);
     display: flex;
 
-
     .search {
         width: 40%;
         margin: auto;
@@ -49,10 +48,10 @@
                     margin-bottom: 10px;
 
                     button {
-                        background-color: #fbc02d;
                         padding: 10px 50px;
+                        background-color: $color-button;
                         &:hover{
-                            background-color: #fdd835;
+                            background-color: $color-button-hover;
                         }
 
                         @extend %button;

@@ -24,15 +24,15 @@ header{
                 padding-left: 0;
 
                 li{
-                    list-style-type: none;
                     padding-right: 50px;
+                    list-style-type: none;
                     cursor: pointer;
                     
                     a{
+                        position: relative;
                         text-decoration: none;
                         font-size: $font-size-title;
                         color: $color-title;
-                        position: relative;
 
                         &::before{
                             content: "";
@@ -60,9 +60,9 @@ header{
 
         .auth-buttons{
             button{
-                background-color: $color-theme;
                 padding: 5px 20px;
                 margin-left: 2px;
+                background-color: $color-theme;
                 @extend %button;
 
                 &:hover{
