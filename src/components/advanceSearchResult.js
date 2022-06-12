@@ -7,7 +7,7 @@ function recipes() {
 		<div className="new-recipes">
 			<div className="box">
 				<div className="recipes-header">
-					<h2>New Recipes</h2>
+					<h2>Result For Search of Recipes by ingredients</h2>
 				</div>
 				<div className="recipes">
 					<div className="recipes-content">
@@ -35,30 +35,8 @@ function recipes() {
 								<button>More</button>
 							</div>
 						</article>
-						<article className="recipes-card">
-							<div className="img-card">
-								<img src={Food} alt="food"></img>
-							</div>
-							<div className="info-card">
-								<h3>big hamburger</h3>
-								<p>big hamburgerbig hamburgerbig hamburgerbig hamburgerbig hamburgerbig hamburger</p>
-							</div>
-							<div className="button-card">
-								<button>More</button>
-							</div>
-						</article>
-						<article className="recipes-card">
-							<div className="img-card">
-								<img src={Food} alt="food"></img>
-							</div>
-							<div className="info-card">
-								<h3>big hamburger</h3>
-								<p>big hamburgerbig hamburgerbig hamburgerbig hamburgerbig hamburgerbig hamburger</p>
-							</div>
-							<div className="button-card">
-								<button>More</button>
-							</div>
-						</article>
+						
+						
 					</div>
 				</div>
 			</div>

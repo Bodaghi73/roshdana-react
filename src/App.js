@@ -5,10 +5,6 @@ import Header from "./components/header";
 import Home from "./pages/home";
 import AdvanceSearch from "./pages/advanceSearch";
 
-
-//css
-import './App.css';
-
 function App() {
   return (
     <Router>
