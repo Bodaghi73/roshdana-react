@@ -1,16 +1,18 @@
 import "./searchRecipes.scss";
 
-function searchRecipes() {
+function advanceSearchBox() {
 	return (
-		<div className="sectionSearch bgi">
+		<div className="sectionSearch">
 			<div className="search">
 				<div className="search-box">
 					<div className="search-box-inner">
 						<div className="search-title">
-							<h2>Search Recipes Of Foods</h2>
+							<h2>Search Recipes By Ingredients</h2>
 						</div>
 						<div className="search-recipes">
-							<input placeholder="Search Recipes"></input>
+							<input placeholder="Enter an ingredient"></input>
+							<input placeholder="Enter an ingredient"></input>
+							<input placeholder="Enter an ingredient"></input>
 						</div>
 						<div className="number-recipes">
 							<label>Number of Recipes:</label>
@@ -26,4 +28,4 @@ function searchRecipes() {
 	);
 }
 
-export default searchRecipes;
+export default advanceSearchBox;
