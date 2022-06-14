@@ -1,8 +1,24 @@
 import "./recipesResult.scss";
-import Food from "../assets/imgs/big-hamburger.webp";
-import Food2 from "../assets/imgs/hot-shakshuka.webp";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
-function recipes() {
+function Recipes(props) {
+	const [list, setList] = useState([]);
+	useEffect(() => {
+		console.log(props.recipes);
+		if (props?.recipes && props?.recipes.length>0) {
+			setList(props?.recipes);
+		} else {
+			async function getData() {
+				const response = await axios.get("https://api.spoonacular.com/recipes/random", {
+					params: { number: 8, apiKey: "f1ed3ee34df94006942d5ababc6abfa0" },
+				});
+				console.log(response);
+				setList(response.data.recipes)
+			}
+			getData();
+		}
+	}, [props.recipes]);
 	return (
 		<div className="new-recipes">
 			<div className="box">
@@ -11,7 +27,24 @@ function recipes() {
 				</div>
 				<div className="recipes">
 					<div className="recipes-content">
-						<article className="recipes-card">
+						{list.map((recipe) => {
+							return (
+								<article className="recipes-card" key={recipe.id}>
+									<div className="img-card">
+										<img src={recipe.image} alt="food"></img>
+									</div>
+									<div className="info-card">
+										<h3>{recipe.title}</h3>
+										<p>big hamburgerbig hamburgerbig hamburgerbig hamburgerbig hamburgerbig hamburger</p>
+									</div>
+									<div className="button-card">
+										<button>More</button>
+									</div>
+								</article>
+							);
+						})}
+
+						{/* <article className="recipes-card">
 							<div className="img-card">
 								<img src={Food} alt="food"></img>
 							</div>
@@ -22,43 +55,7 @@ function recipes() {
 							<div className="button-card">
 								<button>More</button>
 							</div>
-						</article>
-						<article className="recipes-card">
-							<div className="img-card">
-								<img src={Food2} alt="food"></img>
-							</div>
-							<div className="info-card">
-								<h3>big hamburger</h3>
-								<p>big hamburgerbig hamburgerbig hamburgerbig hamburgerbig hamburgerbig hamburger</p>
-							</div>
-							<div className="button-card">
-								<button>More</button>
-							</div>
-						</article>
-						<article className="recipes-card">
-							<div className="img-card">
-								<img src={Food} alt="food"></img>
-							</div>
-							<div className="info-card">
-								<h3>big hamburger</h3>
-								<p>big hamburgerbig hamburgerbig hamburgerbig hamburgerbig hamburgerbig hamburger</p>
-							</div>
-							<div className="button-card">
-								<button>More</button>
-							</div>
-						</article>
-						<article className="recipes-card">
-							<div className="img-card">
-								<img src={Food} alt="food"></img>
-							</div>
-							<div className="info-card">
-								<h3>big hamburger</h3>
-								<p>big hamburgerbig hamburgerbig hamburgerbig hamburgerbig hamburgerbig hamburger</p>
-							</div>
-							<div className="button-card">
-								<button>More</button>
-							</div>
-						</article>
+						</article> */}
 					</div>
 				</div>
 			</div>
@@ -66,4 +63,4 @@ function recipes() {
 	);
 }
 
-export default recipes;
+export default Recipes;
