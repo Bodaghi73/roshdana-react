@@ -3,13 +3,14 @@ import { useState, useContext } from "react";
 import RecipesContext from "../context/recipesContext";
 import "./searchRecipes.scss";
 
-const AdvanceSearchBox = () => {
+function AdvanceSearchBox () {
 	const [inputs, setInputs] = useState({
 		ingredient1: "",
 		ingredient2: "",
 		ingredient3: "",
 		number: "",
 	});
+	
 	const { setRecipes } = useContext(RecipesContext);
 
 	const handleChange = (event) => {

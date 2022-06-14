@@ -1,13 +1,16 @@
 import SearchRecipes from "../components/searchRecipes";
 import Recipes from "../components/recipes";
+import {useState} from "react";
+import { RecipesProvider } from "../context/recipesContext";
 
-function home() {
+function Home() {
+    const [recipes, setRecipes] = useState([])
     return(
-        <div>
+        <RecipesProvider value={{recipes, setRecipes}}>
             <SearchRecipes></SearchRecipes>
-            <Recipes></Recipes>
-        </div>
+            <Recipes recipes={recipes}></Recipes>
+        </RecipesProvider>
     );
 }
 
-export default home;
+export default Home;
