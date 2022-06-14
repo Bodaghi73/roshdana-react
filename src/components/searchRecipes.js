@@ -2,10 +2,10 @@ import "./searchRecipes.scss";
 
 function searchRecipes() {
 	return (
-		<div className="section">
+		<div className="sectionSearch bgi">
 			<div className="search">
 				<div className="search-box">
-					<div className="search-box-inner">
+					<form className="search-form">
 						<div className="search-title">
 							<h2>Search Recipes Of Foods</h2>
 						</div>
@@ -19,7 +19,7 @@ function searchRecipes() {
 						<div className="search-button">
 							<button>Search</button>
 						</div>
-					</div>
+					</form>
 				</div>
 			</div>
 		</div>

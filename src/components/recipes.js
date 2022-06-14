@@ -1,4 +1,4 @@
-import "./recipes.scss";
+import "./recipesResult.scss";
 import Food from "../assets/imgs/big-hamburger.webp";
 import Food2 from "../assets/imgs/hot-shakshuka.webp";
 

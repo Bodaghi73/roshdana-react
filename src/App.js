@@ -1,12 +1,9 @@
 import {BrowserRouter as Router,Routes, Route} from "react-router-dom";
 
 //components
-import Home from "./pages/home.js";
 import Header from "./components/header";
-
-
-//css
-import './App.css';
+import Home from "./pages/home";
+import AdvanceSearch from "./pages/advanceSearch";
 
 function App() {
   return (
@@ -14,6 +11,7 @@ function App() {
       <Header/>
       <Routes>
         <Route path="/" element={<Home/>}/>
+        <Route path="/AdvanceSearch" element={<AdvanceSearch/>}/>
       </Routes>
 
     </Router>

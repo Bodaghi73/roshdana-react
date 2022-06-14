@@ -1,9 +1,13 @@
 @import '../assets/style.scss';
 
-.section {
+
+.bgi{
+    background-image: url(../assets/imgs/mozzarella-pizza.jpg);
+}
+
+.sectionSearch {
     width: 100%;
     height: 500px;
-    background-image: url(../assets/imgs/mozzarella-pizza.jpg);
     display: flex;
 
     .search {
@@ -16,22 +20,24 @@
             background-color: rgba(250, 250, 250, 0.7);
             border-radius: 10px;
 
-            .search-box-inner {
+            .search-form {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
 
                 .search-recipes {
-                    margin-bottom: 10px;
-
+                    display: flex;
+                    flex-direction: column;
+                    
                     input {
+                        margin-bottom: 10px;
                         width: 100%;
                         @extend %input;
                     }
                 }
 
                 .number-recipes {
-                    margin-bottom: 10px;
+                    margin-bottom: 15px;
 
                     label {
                         font-size: 12px;
@@ -45,7 +51,7 @@
                 .search-button {
                     display: flex;
                     justify-content: center;
-                    margin-bottom: 10px;
+                    margin-bottom: 15px;
 
                     button {
                         padding: 10px 50px;
