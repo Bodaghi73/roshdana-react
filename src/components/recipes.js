@@ -5,7 +5,6 @@ import axios from "axios";
 function Recipes(props) {
 	const [list, setList] = useState([]);
 	useEffect(() => {
-		console.log(props.recipes);
 		if (props?.recipes && props?.recipes.length>0) {
 			setList(props?.recipes);
 		} else {
@@ -13,7 +12,6 @@ function Recipes(props) {
 				const response = await axios.get("https://api.spoonacular.com/recipes/random", {
 					params: { number: 8, apiKey: "f1ed3ee34df94006942d5ababc6abfa0" },
 				});
-				console.log(response);
 				setList(response.data.recipes)
 			}
 			getData();
@@ -43,19 +41,6 @@ function Recipes(props) {
 								</article>
 							);
 						})}
-
-						{/* <article className="recipes-card">
-							<div className="img-card">
-								<img src={Food} alt="food"></img>
-							</div>
-							<div className="info-card">
-								<h3>big hamburger</h3>
-								<p>big hamburgerbig hamburgerbig hamburgerbig hamburgerbig hamburgerbig hamburger</p>
-							</div>
-							<div className="button-card">
-								<button>More</button>
-							</div>
-						</article> */}
 					</div>
 				</div>
 			</div>
