@@ -1,0 +1,82 @@
+@import '../assets/style.scss'; 
+
+header{
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 50px;
+        background-color: $background-color-title;
+
+        .logo{
+            width: 50px;
+            height: 50px;
+
+            img{
+                width: 100%;
+            }
+        }
+
+        .menu{
+            ul{
+                display: flex;
+                justify-content: space-between;
+                padding-left: 0;
+
+                li{
+                    padding-right: 50px;
+                    list-style-type: none;
+                    cursor: pointer;
+                    
+                    a{
+                        position: relative;
+                        text-decoration: none;
+                        font-size: $font-size-title;
+                        color: $color-title;
+
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            width: 0;
+                            height: 1px;
+                            background-color: $color-theme;
+                            bottom: 0;
+                        }
+
+                        &:hover{
+                            color: $color-theme;
+                            transition: all linear 0.2s;
+                            
+                            &::before{
+                                width: 100%;
+                                transition: all linear 0.3s;
+                            }
+    
+                        }
+                    }
+                }
+            }
+        }
+
+        .auth-buttons{
+            button{
+                padding: 5px 20px;
+                margin-left: 2px;
+                background-color: $color-theme;
+                @extend %button;
+
+                &:hover{
+                    background-color: $color-title;
+                    a{
+                        color: $color-theme;
+                    }
+                }
+
+                a{
+                    color: $color-title;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
